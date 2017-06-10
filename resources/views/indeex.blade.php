@@ -15,6 +15,15 @@
 		<td> Jenis Kelamin </td>
 	</tr>
 
+	@foreach ($tampilan as $data)
+		<tr>
+			<td>{{ $data->id }}</td>
+			<td>{{ $data->nama }}</td>
+			<td>{{ $data->jurusan }}</td>
+			<td>{{ $data->jenis_kelamin }}</td>
+		</tr>
+	@endforeach
+
 </table>
 </center>
 </body>

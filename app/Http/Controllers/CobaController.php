@@ -20,19 +20,11 @@ class CobaController extends Controller
     	return $aa;
     }
 
-    public function indeex ()
+    public function indeex ($a)
     {
-    	$tampilan = coba::all();
-    	return view ('indeex', compact('tampilan'));
+        $tampilan = coba::where('nama','like', '%'. $a. '%')->orwhere('jurusan','like', '%' .$a. '%')->get();
+        return $tampilan;
     }
 
-    public function data ($test)
-    {
-    	$dutaa = ['binatang' => ['gajah' , 'kucing' , 'anjing' , 'semut' , 'kelinci'],
-    			  'kendaraan' => ['motor' , 'mobil' , 'bus' , 'becak' , 'truk'],
-    			  'laptop' => ['hp' , 'asus' , 'lenovo' , 'axioo' , 'apple']];
-    	$ahaha = $dutaa[$test];
-    	return view ('data', compact('ahaha'));
-    }
 
 }

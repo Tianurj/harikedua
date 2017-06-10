@@ -12,9 +12,10 @@ Route::get('/', function () {
 // Route::get('eskul','PrakerinController@ekstakulikuller');
 // Route::get('guru','PrakerinController@namaguru');
 // Route::get('matpel','PrakerinController@matapelajaran');
-// Route::get('/{a}','PrakerinController@parameter');
-Route::get('test1', 'CobaController@test');
-Route::get('test2/{id}','CobaController@test2');
-Route::get('tampilan','CobaController@indeex');
-Route::get('data', 'CobaController@ulang');
-Route::get('/{test}', 'CobaController@data');
+// // Route::get('/{a}','PrakerinController@parameter');
+// Route::get('test1', 'CobaController@test');
+// Route::get('test2/{id}','CobaController@test2');
+// Route::get('tampilan/{a}','CobaController@indeex');
+// Route::get('data', 'CobaController@ulang');
+// Route::get('/{test}', 'CobaController@data');
+Route::resource('post', 'PostController');
